@@ -31,11 +31,10 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-          cache: maven
 
       # Build Maven project
       - name: Build with Maven
-        run: mvn -B clean package
+        run: mvn -B clean install
 
       # Login to DockerHub
       - name: Login to DockerHub
