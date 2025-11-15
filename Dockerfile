@@ -1,5 +1,4 @@
-FROM eclipse-temurin:17-jdk:slim
-WORKDIR /app
+FROM openjdk:17-jdk-slim
 EXPOSE 8080
-COPY target/springboot-image-new.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ADD target/springboot-image-new.jar springboot-image-new.jar
+ENTRYPOINT ["java", "-jar", "/springboot-image-new.jar"]
