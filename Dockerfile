@@ -1,4 +1,9 @@
-FROM openjdk:8-jdk-alpine
+FROM eclipse-temurin:8-jdk
+
+WORKDIR /app
+
+COPY target/springboot-image-new.jar app.jar
+
 EXPOSE 8080
-ADD target/springboot-image-new.jar springboot-image-new.jar
-ENTRYPOINT ["java", "-jar", "/springboot-image-new.jar"]
+
+ENTRYPOINT ["java","-jar","app.jar"]
