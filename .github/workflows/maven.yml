@@ -10,7 +10,7 @@ name: Project CI-CD Pipeline
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "Master" ]
   pull_request:
 
 permissions:
@@ -34,7 +34,7 @@ jobs:
 
       # Build Maven project
       - name: Build with Maven
-        run: mvn -B clean install
+        run: mvn clean install
 
       # Login to DockerHub
       - name: Login to DockerHub
